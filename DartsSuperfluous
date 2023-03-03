@@ -1,0 +1,237 @@
+darts superfluous
+
+/*
+	
+	
+	
+	public void P1Turn() {
+		Scanner sc = new Scanner(System.in);
+		while (P1LegWins != 5 || P2LegWins != 5) {
+			for(dart = 0; dart < 4; dart++) {
+				
+				int throwOne= sc.nextInt();
+
+
+				P1CurrentScore = P1CurrentScore - throwOne;
+				if (P1CurrentScore == 1 || P1CurrentScore < 0) { 
+					System.out.println("Bust\n--------------------------------------");
+					P1CurrentScore = P1CurrentScore + throwOne;
+				} else if (P1CurrentScore== 0){
+					System.out.println("Game Won");
+					P1LegWins ++;
+				} else {
+					System.out.println("\t\t\t" + P1CurrentScore+ " Remaining");
+				}
+	
+				System.out.println("Second Throw: ");
+				int throwTwo= sc.nextInt();
+				P1CurrentScore = P1CurrentScore - throwTwo;
+				if (P1CurrentScore == 1 || P1CurrentScore < 0) { 
+					System.out.println("Bust\n--------------------------------------");
+					P1CurrentScore = P1CurrentScore + throwTwo;
+				} else if (P1CurrentScore== 0){
+					System.out.println("Game Won");
+					P1LegWins ++;
+				} else {
+					System.out.println("\t\t\t" + P1CurrentScore+ " Remaining");
+				}
+				System.out.println("Third Throw: ");
+				int throwThree= sc.nextInt();
+				P1CurrentScore = P1CurrentScore - throwThree;
+				if (P1CurrentScore == 1 || P1CurrentScore < 0) { 
+					System.out.println("Bust\n--------------------------------------");
+					P1CurrentScore = P1CurrentScore + throwThree;
+				} else if (P1CurrentScore== 0){
+					System.out.println("Game Won");
+					P1LegWins ++;
+				} else {
+					System.out.println("\t\t\t" + P1CurrentScore+ " Remaining");
+				}
+
+
+				System.out.println(getPlayerTwoName() + "\nFirst Throw: ");
+				int P2throwOne= sc.nextInt();
+				P2CurrentScore = P2CurrentScore - P2throwOne;
+				if (P2CurrentScore == 1 || P2CurrentScore < 0) { 
+					System.out.println("Bust\n--------------------------------------");
+					P2CurrentScore = P2CurrentScore + P2throwOne;
+				} else if (P2CurrentScore== 0){
+					System.out.println("Game Won");
+					P2LegWins ++;
+				} else {
+					System.out.println("\t\t\t" + P2CurrentScore+ " Remaining");
+				}
+				System.out.println("Second Throw: ");			
+				int P2throwTwo= sc.nextInt();
+				P2CurrentScore = P2CurrentScore - P2throwTwo;
+				if (P2CurrentScore == 1 || P2CurrentScore < 0) { 
+					System.out.println("Bust\n--------------------------------------");
+					P2CurrentScore = P2CurrentScore + P2throwTwo;
+				} else if (P2CurrentScore== 0)
+					System.out.println("Game Won");
+					P2LegWins ++;
+				} else {
+					System.out.println("\t\t\t" + P2CurrentScore+ " Remaining");
+				}
+				System.out.println("Third Throw: ");
+				int P2throwThree= sc.nextInt();
+				P2CurrentScore = P2CurrentScore - P2throwThree;
+				if (P2CurrentScore == 1 || P2CurrentScore < 0) { 
+					System.out.println("Bust\n--------------------------------------");
+					P2CurrentScore = P2CurrentScore + P2throwThree;
+				} else if (P2CurrentScore== 0){
+					System.out.println("Game Won");
+					P2LegWins ++;
+				} else {
+					System.out.println("\t\t\t" + P2CurrentScore+ " Remaining");
+				}
+			}
+		}
+
+
+	}
+
+
+
+}
+
+
+//public void P2Turn() {
+//Scanner sc = new Scanner(System.in);
+
+/*
+	public void P1Throws() {
+		Scanner sc = new Scanner(System.in);
+
+
+		//Throw One
+		System.out.println(getPlayerOneName() + " ");
+		System.out.println("First Throw: ");
+		int throw_one = sc.nextInt();
+
+		P1CurrentScore = P1CurrentScore- throw_one;
+		if (P1CurrentScore == 1 || P1CurrentScore < 0) { 
+			System.out.println("Bust\n--------------------------------------");
+			P1CurrentScore = P1CurrentScore + throw_one;
+		} else if (P1CurrentScore== 0){
+			System.out.println("Game Won");
+			P1LegWins ++;
+		} else {
+			System.out.println("\t\t\t" + P1CurrentScore+ " Remaining");
+
+			//Throw Two
+			System.out.println("Second Throw: ");
+			int throw_two = sc.nextInt();
+
+			P1CurrentScore= P1CurrentScore- throw_two;		
+			if (P1CurrentScore== 1|| P1CurrentScore < 0) { 
+				System.out.println("Bust\n--------------------------------------");
+				P1CurrentScore = P1CurrentScore + throw_two;
+			} else if (P1CurrentScore== 0){
+				System.out.println("Game Won");
+				P1LegWins ++;
+				P1CurrentScore = 501;
+				P2CurrentScore = 501;
+
+				scores();
+			} else {
+				System.out.println("\t\t\t" + P1CurrentScore+ " Remaining");
+
+
+				//Throw Three
+				System.out.println("Third Throw: ");
+				int throw_three = sc.nextInt();
+
+				P1CurrentScore= P1CurrentScore- throw_three;
+				if (P1CurrentScore== 1|| P1CurrentScore < 0) { 
+					System.out.println("Bust\n--------------------------------------");
+					P1CurrentScore = P1CurrentScore + throw_three;
+				} else if (P1CurrentScore== 0){
+					System.out.println("Game Won");
+					P1LegWins ++;
+					P1CurrentScore = 501;
+					P2CurrentScore = 501;
+
+					scores();
+
+
+				} else {
+					System.out.println("\t\t\t" + P1CurrentScore+ " Remaining \n--------------------------------------");
+				}
+			}
+		}
+	}
+
+
+	public void P2Throws() {
+		Scanner sc = new Scanner(System.in);
+
+		//Throw One
+		System.out.println(getPlayerTwoName() + " ");
+		System.out.println("First Throw: ");
+		int throw_one = sc.nextInt();
+
+		P2CurrentScore = P2CurrentScore- throw_one;
+		if (P2CurrentScore == 1|| P2CurrentScore < 0) { 
+			System.out.println("Bust\n--------------------------------------");
+			P2CurrentScore = P2CurrentScore + throw_one;
+		} else if (P2CurrentScore== 0){
+			System.out.println("Game Won");
+			P2LegWins ++;
+			P1CurrentScore = 501;
+			P2CurrentScore = 501;
+
+			scores();
+
+		} else {
+			System.out.println();
+			System.out.println("\t\t\t" + P2CurrentScore+ " Remaining");
+
+
+			//Throw Two
+			System.out.println("Second Throw: ");
+			int throw_two = sc.nextInt();
+
+			P2CurrentScore= P2CurrentScore- throw_two;		
+			if (P2CurrentScore== 1|| P2CurrentScore < 0) { 
+				System.out.println("Bust\n--------------------------------------");
+				P2CurrentScore = P2CurrentScore + throw_two;
+			} else if (P2CurrentScore== 0){
+				System.out.println("Game Won");
+				P2LegWins ++;
+				P1CurrentScore = 501;
+				P2CurrentScore = 501;
+
+				scores();
+
+
+			} else {
+				System.out.println("\t\t\t" + P2CurrentScore+ " Remaining");
+
+
+				//Throw Three
+				System.out.println("Third Throw: ");
+				int throw_three = sc.nextInt();
+
+				P2CurrentScore= P2CurrentScore- throw_three;
+				if (P2CurrentScore== 1 || P2CurrentScore < 0) { 
+					System.out.println("Bust\n--------------------------------------");
+					P2CurrentScore = P2CurrentScore + throw_three;
+				} else if (P2CurrentScore == 0){
+					System.out.println("Game Won");
+					P2LegWins ++;
+					P1CurrentScore = 501;
+					P2CurrentScore = 501;
+
+					scores();
+
+
+				} else {
+					System.out.println("\t\t\t" + P2CurrentScore + " Remaining \n--------------------------------------");
+				}
+
+			}
+		}
+
+	}	
+ */
